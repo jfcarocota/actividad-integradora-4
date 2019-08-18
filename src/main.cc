@@ -1,10 +1,22 @@
-#include<iostream>
 
-int main()
-{
-    std::cout << "hello world" << std::endl;
+#include<iostream> 
+#include "MazeSolve.hh"
 
-    std::getchar();
+using namespace std; 
 
-    return 0;
-}
+int main() 
+{ 
+	MazeSolve mazeSolve = *new MazeSolve();
+
+	int mat[3][2] = 
+	{ 
+		{1, 2}, 
+		{4, 5}, 
+		{3, 6} 
+	}; 
+	
+	mazeSolve.printAllPaths(*mat, 3, 2); 
+	
+	getchar();
+	return 0; 
+} 
